@@ -1,0 +1,73 @@
+/* Image Slider */
+.image-slider {
+   position: relative;
+   justify-content: center;
+   overflow: hidden;
+   
+ }
+ 
+ /* Slider Images */
+ .currentSlide {
+   opacity: 0;
+   transform: scale(0.8);
+   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+ }
+ 
+ .currentSlide.active {
+   opacity: 1;
+   transform: scale(1);
+ }
+ 
+ /* Arrows */
+ .left, .right {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 2rem;
+   color: white;
+   cursor: pointer;
+   user-select: none;
+   z-index: 10;
+   transition: color 0.3s ease;
+ }
+ 
+ .left {
+   left: 2rem;
+ }
+ 
+ .right {
+   right: 2rem;
+ }
+ 
+ .left:hover, .right:hover {
+   color: yellow;
+ }
+ 
+ /* ✅ Bottom Indicators */
+ .indicators {
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 8px;
+ }
+ 
+ .indicator {
+   width: 12px;
+   height: 12px;
+   background-color: gray;
+   border-radius: 50%;
+   cursor: pointer;
+   border: none;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .indicator.active {
+   background-color: yellow;
+ }
+ 
+ .indicator:hover {
+   background-color: white;
+ }
+ 

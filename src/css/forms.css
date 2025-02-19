@@ -1,0 +1,13 @@
+.forms{
+    width:390px;
+    border-radius: 6px;
+    padding:50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: aliceblue;
+   
+}
+.prime{
+    display:flex;
+    margin-top: 13%;
+    justify-content: center;
+}

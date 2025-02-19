@@ -5,7 +5,7 @@ import vc from "../assets/committee/rk_sinha.jpg";
 import dean from "../assets/committee/660677ed82b90_niranjan.melkania.jpg";
 import oc1 from "../assets/committee/nagendra.jpg";
 import oc2 from "../assets/committee/iq.png";
-import oc3 from "../assets/committee/eti_sharma.png";
+import oc3 from "../assets/committee/Eti_ma'am.png";
 import st1 from "../assets/committee/shashank.png";
 import st2 from "../assets/committee/Himanshu.png";
 import st3 from "../assets/committee/Pawni.png";
@@ -178,9 +178,9 @@ const Committee = () => {
           ))}
         </div>
         <div className="row">
-          <div className="col">
-            <Footer />
-          </div>
+        <div className="col-md-12 p-0">
+          <Footer />
+        </div>
         </div>
       </div>
     </div>

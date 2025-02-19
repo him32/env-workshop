@@ -36,36 +36,44 @@ const QRCheck = () => {
   }, [name, qr]);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <Navbar />
       </div>
       <div className="row">
         <MovingNotice />
       </div>
-      <div className="row text-center">
+      <div className="row text-center mt-2 p-2">
         {loading ? (
           // Display Loading Spinner
-          <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+          <div
+            className="d-flex justify-content-center align-items-center"
+            style={{ height: "50vh" }}
+          >
             <Spinner animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
             </Spinner>
           </div>
         ) : vf ? (
           // If certificate is valid
-          <p className="text-success fw-bold">✅ Your certificate is valid!!!</p>
+          <p className="text-success fw-bold">
+            ✅ Your certificate is valid!!!
+          </p>
         ) : (
           // If certificate is invalid
-          <Alert variant="danger" dismissible>
+          <Alert variant="danger">
             <Alert.Heading>🚨 Oh snap! Invalid Credentials!</Alert.Heading>
             <p>
-              Please check your QR code and name again. If you think this is a mistake, contact support.
+              Please check your QR code and name again. If you think this is a
+              mistake, contact support.
             </p>
           </Alert>
         )}
       </div>
-      <div className="row">
-        <Footer />
+      <div className="row ">
+        <div className="col-md-12 p-0">
+          <Footer />
+        </div>
       </div>
     </div>
   );

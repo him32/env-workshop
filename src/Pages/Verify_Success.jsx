@@ -28,7 +28,9 @@ const Verify_Success = () => {
           {/* <VerifySuccess code={qr}/> */}
         </div>
         <div className="row">
-          <Footer/>
+        <div className="col-md-12 p-0">
+          <Footer />
+        </div>
         </div>
       </div>
     </div>

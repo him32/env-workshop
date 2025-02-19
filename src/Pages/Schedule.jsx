@@ -32,9 +32,11 @@ const Schedule = () => {
             </tbody>
           </table>
         </div>
-        <div className="row p-0 g-0">
+        <div className="row">
          
-            <Footer/>
+        <div className="col-md-12 p-0">
+          <Footer />
+        </div>
           
         </div>
       </div>

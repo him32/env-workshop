@@ -59,7 +59,7 @@ const AboutWorkshop = () => {
                   ICAR-IARI
                 </h4>
                 <p className="mt-3">
-                  <strong>Workshop Dates:</strong> 45st - 25th April 2025
+                  <strong>Workshop Dates:</strong> 21st - 25th April 2025
                 </p>
                 <p>
                   <strong>Deadline for Registration:</strong> 15th April 2025

@@ -1,22 +1,23 @@
-import { useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
+import { useState } from "react";
+import Alert from "react-bootstrap/Alert";
 
 function Failure() {
-  const [show, setShow] = useState(true);
-
-  if (show) {
-    return (
-      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+  return (
+    <div className="container-fluid" style={{ marginTop: "100px" }}>
+      <div className="row">
+        <div className="col-md-12">
+        <Alert variant="danger">
+        <Alert.Heading>🚨 Oh snap! Invalid Credentials!</Alert.Heading>
         <p>
-          Change this and that and try again. Duis mollis, est non commodo
-          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Cras mattis consectetur purus sit amet fermentum.
+          Please check your QR code and name again. If you think this is a
+          mistake, contact support.
         </p>
       </Alert>
-    );
-  }
-  
+        </div>
+      </div>
+      
+    </div>
+  );
 }
 
 export default Failure;

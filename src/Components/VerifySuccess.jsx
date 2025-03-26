@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import gbu from "../assets/logo/gbuLogo.webp";
+import Failure from "../Pages/Failure";
+import { useNavigate } from "react-router-dom";
 
 function VerifySuccess(props) {
   const [userName, setUserName] = useState("");
   const [certificateUrl, setCertificateUrl] = useState("");
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false); // State for loader
 
   useEffect(() => {
@@ -15,12 +18,14 @@ function VerifySuccess(props) {
         params: { qr: props.code },
       })
       .then((response) => {
-        console.log(response.data.certificateUrl);
+       
         setUserName(response.data.name);
         setCertificateUrl(response.data.certificateUrl);
       })
       .catch((error) => {
-        console.error("Error fetching certificate details:", error);
+        //console.error("Error fetching certificate details:", error);
+        
+        navigate("/failure");
       });
   }, [props.code]);
 
@@ -39,12 +44,12 @@ function VerifySuccess(props) {
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");
       link.href = url;
-      link.setAttribute("download", "certificate.pdf");
+      link.setAttribute("download", `${userName}.pdf`);
       document.body.appendChild(link);
       link.click();
       link.remove();
     } catch (error) {
-      console.error("Error downloading certificate:", error);
+      //console.error("Error downloading certificate:", error);
     } finally {
       setLoading(false); // Hide loader after download starts
     }

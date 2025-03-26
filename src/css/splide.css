@@ -1,0 +1,19 @@
+.splide {
+    padding: 0;
+}
+
+.splide__arrow svg {
+    fill: white;
+  
+}
+
+.splide__pagination__page.is-active {
+    background: yellow;
+    
+}
+
+.splide__arrow:hover:not(:disabled) svg {
+    fill: yellow;
+}
+
+

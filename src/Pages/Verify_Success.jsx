@@ -7,30 +7,19 @@ import Footer from "../Components/Footer";
 import Failure from "./Failure";
 
 const Verify_Success = () => {
-  const {qr}= useParams();
+  const { qr } = useParams();
   console.log(qr);
-
-
-  
-
 
   return (
     <div>
-      <div className="container-fluid">
+      <div className="container-fluid mt-5 ">
         <div className="row">
-          <Navbar />
+          <div className="col-md-12">
+            <MovingNotice />
+          </div>
         </div>
         <div className="row">
-          <MovingNotice />
-        </div>
-        <div className="row">
-          {qr==="2500"?<Failure/>:<VerifySuccess code={qr}/>}
-          {/* <VerifySuccess code={qr}/> */}
-        </div>
-        <div className="row">
-        <div className="col-md-12 p-0">
-          <Footer />
-        </div>
+          <div className="col-md-12">{<VerifySuccess code={qr} />}</div>
         </div>
       </div>
     </div>

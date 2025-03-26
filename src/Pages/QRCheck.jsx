@@ -22,11 +22,11 @@ const QRCheck = () => {
         const response = await axios.get(
           `${import.meta.env.VITE_VERIFY_URL}/verify?qr=${qr}&name=${name}`
         );
-        console.log("Response Data:", response.data);
+        //console.log("Response Data:", response.data);
         setVf(true); // Set valid response
       } catch (error) {
         setVf(false); // Set invalid response
-        console.error("Error fetching QR code verification:", error);
+       // console.error("Error fetching QR code verification:", error);
       } finally {
         setLoading(false); // Stop loading
       }
@@ -37,13 +37,11 @@ const QRCheck = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <Navbar />
-      </div>
+      
       <div className="row">
         <MovingNotice />
       </div>
-      <div className="row text-center mt-2 p-2">
+      <div className="row text-center mt-5 p-2">
         {loading ? (
           // Display Loading Spinner
           <div
@@ -70,11 +68,7 @@ const QRCheck = () => {
           </Alert>
         )}
       </div>
-      <div className="row ">
-        <div className="col-md-12 p-0">
-          <Footer />
-        </div>
-      </div>
+      
     </div>
   );
 };

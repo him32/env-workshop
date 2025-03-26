@@ -4,7 +4,7 @@ import About from "../assets/Untitled design/About.jpg";
 
 const Asobt = () => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row shadow-lg p-3 mb-5 bg-body-tertiary rounded overflow-hidden">
         <div className="col-md-6">
           <div className="row">
@@ -31,11 +31,12 @@ const Asobt = () => {
             </p>
           </div>
         </div>
-        <div className="col-md-6 d-flex justify-content-center align-items-center">
+        <div className="col-md-6 d-flex justify-content-center align-items-center p-4">
           <img
             src={About}
             className="img-fluid rounded-pill"
             alt="About SOBT"
+            style={{ width: "100%", objectFit: "cover", height: "100%" }}
           />
         </div>
       </div>

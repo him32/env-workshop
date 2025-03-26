@@ -27,16 +27,18 @@ const CodeVerify = () => {
     }
 
     setLoading(true); // Start loading
-    console.log("Entered QR Code:", formData.qr);
+    //console.log("Entered QR Code:", formData.qr);
 
     try {
       const response = await axios.get(
         `${import.meta.env.VITE_VERIFY_URL}/verify?qr=${formData.qr}&name=${formData.name}`
       );
-      console.log("Response Data:", response.data);
+   
+
+      // console.log("Response Data:", response.data);
       navigate(`/verify-success/${formData.qr}`);
     } catch (error) {
-      console.error("Error fetching QR code verification:", error);
+      //console.error("Error fetching QR code verification:", error);
       setShowError(true);
     } finally {
       setLoading(false); // Stop loading
